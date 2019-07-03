@@ -51,8 +51,18 @@ final class APIWeatherManager: APIManager {
         
         fetch(request: request, parse: { (responseData) -> [WeatherDay]? in
             do {
-               let forecast = try JSONDecoder().decode(JSONForecastFiveDays.self, from: responseData)
-                return nil
+                let forecast: JSONForecastFiveDays = try JSONDecoder().decode(JSONForecastFiveDays.self, from: responseData)
+  
+                let weatherDays: [WeatherDay?] = forecast.list.map({ (jsonDay) -> WeatherDay? in
+                    WeatherDay(json: jsonDay)
+                })
+                
+                let filteredWeatherDays: [WeatherDay] = weatherDays.filter({ (weatherDay) -> Bool in
+                    weatherDay != nil
+                }) as! [WeatherDay]
+                
+                return filteredWeatherDays
+                
             } catch let error as NSError {
                 print(error.description)
                 return nil

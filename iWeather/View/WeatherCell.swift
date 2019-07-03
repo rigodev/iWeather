@@ -9,9 +9,13 @@
 import UIKit
 
 class WeatherCell: UITableViewCell {
-
+    
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
 
-    
+    var viewModel: WeatherCellViewModelType? {
+        didSet {
+            dateLabel.text = viewModel?.date
+        }
+    }
 }

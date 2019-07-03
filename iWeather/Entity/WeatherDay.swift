@@ -33,3 +33,18 @@ extension WeatherDay {
         return "\(Int(humidity)) %"
     }
 }
+
+extension WeatherDay: JSONDayDecodable {
+    
+    init?(json: JSONDay) {
+        guard
+            let iconString = json.weather.first?.main,
+            let iconImage = WeatherIconManager(rawValue: iconString).image
+        else { return nil }
+        
+        icon = iconImage
+        date = Date(timeIntervalSince1970: json.dt)
+        temperature = json.main.temp
+        humidity = json.main.humidity
+    }
+}

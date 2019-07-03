@@ -13,6 +13,10 @@ enum APIResult<T> {
     case failure(NSError)
 }
 
+protocol JSONDayDecodable {
+    init?(json: JSONDay)
+}
+
 protocol APIManager {
 
     var session: URLSession { get }

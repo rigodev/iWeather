@@ -90,6 +90,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="i0c-S1-fav"/>
+                    <connections>
+                        <outlet property="weatherDateListTableView" destination="GeL-2s-quI" id="sde-HS-8LP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
