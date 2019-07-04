@@ -13,6 +13,7 @@ protocol WeatherCellViewModelType {
     
     var date: String { get }
     var temperature: String { get }
+    var description: String { get }
     var weekday: String { get }
     var icon: Box<UIImage?> { get }
     

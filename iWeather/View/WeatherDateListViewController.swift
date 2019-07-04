@@ -8,10 +8,6 @@
 
 import UIKit
 
-enum ReuseCellID: String {
-    case dateList = "WeatherCell"
-}
-
 class WeatherDateListViewController: UIViewController {
     
     @IBOutlet weak var weatherDateListTableView: UITableView!
@@ -19,12 +15,23 @@ class WeatherDateListViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private var viewModel: WeatherDateListViewModelType!
+    weak var delegate: WeatherDateListViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configure()
         viewModel = WeatherDateListViewModel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.isHidden = true
+    }
+    
+    @IBAction func menuButtonTapped(_ sender: UIButton) {
+        delegate?.toggleMenu()
     }
 }
 
@@ -70,11 +77,12 @@ extension WeatherDateListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let num = viewModel.numberOfRows()
+        tableView.isHidden = num > 0 ? false : true        
         return num
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ReuseCellID.dateList.rawValue, for: indexPath) as? WeatherCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: WeatherCell.reuseId, for: indexPath) as? WeatherCell else {
             return UITableViewCell()
         }
         
