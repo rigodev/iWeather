@@ -7,8 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 protocol WeatherCellViewModelType {
     
-     var date: String { get }
+    var date: String { get }
+    var temperature: String { get }
+    var weekday: String { get }
+    var icon: Box<UIImage?> { get }
+    
+    func fetchWeatherIcon()
 }

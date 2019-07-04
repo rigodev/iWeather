@@ -12,27 +12,28 @@ typealias ForecastFiveDays = [WeatherDay]
 
 class WeatherDateListViewModel: WeatherDateListViewModelType {
     
-    private let apiKey: String
     private var forecast: ForecastFiveDays = []
-    
-    private lazy var apiWeatherManager: APIWeatherManager = {
-        return APIWeatherManager(apiKey: self.apiKey)
-    }()
+    private var apiWeatherManager: APIWeatherManager
     
     init?() {
-        guard
-            let path = Bundle.main.path(forResource: "Info", ofType: "plist"),
-            let infoDictionary = NSDictionary(contentsOfFile: path) as? [String: AnyObject],
-            let apiKey = infoDictionary["APIKey"] as? String
-            else { return nil }
-        
-        self.apiKey = apiKey
+        guard let apiWeatherManager = APIWeatherManager() else { return nil }
+        self.apiWeatherManager = apiWeatherManager
     }
     
-    func fetchFiveDaysWeatherData(forCity city: String, completion: @escaping (Error?) -> Void) {
-        apiWeatherManager.fetchFiveDaysWeather(forCity: city) { [weak self] (apiResult) in
-            self?.forecast.removeAll()
-            
+    func fetchFiveDaysWeatherData(forCity cityString: String, completion: @escaping (Error?) -> Void) {
+        
+        self.forecast.removeAll()
+        
+        guard
+            let city = cityString.trimmingCharacters(in: .whitespacesAndNewlines).addingPercentEncoding(withAllowedCharacters: .urlHostAllowed),
+            !city.isEmpty
+            else {
+                completion(nil)
+                return
+        }
+        
+        
+        apiWeatherManager.fetchFiveDaysForecast(forCity: city) { [weak self] (apiResult) in
             switch apiResult {
             case .failure(let error):
                 completion(error)
@@ -50,6 +51,6 @@ class WeatherDateListViewModel: WeatherDateListViewModelType {
     func weatherCellViewModel(forIndex index: Int) -> WeatherCellViewModelType? {
         guard index < forecast.count else { return nil }
         
-        return WeatherCellViewModel(weatherDay: forecast[index])
+        return WeatherCellViewModel(weatherDay: forecast[index], apiWeatherManager: apiWeatherManager)
     }
 }
