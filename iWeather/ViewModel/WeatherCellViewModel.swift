@@ -28,6 +28,10 @@ class WeatherCellViewModel: WeatherCellViewModelType {
         return weatherDay.weekdayString
     }
     
+    var description: String {
+        return weatherDay.description
+    }
+    
     init(weatherDay: WeatherDay, apiWeatherManager: APIWeatherManager) {
         self.weatherDay = weatherDay
         self.apiWeatherManager = apiWeatherManager

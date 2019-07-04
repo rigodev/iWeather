@@ -25,7 +25,7 @@ enum ForecastRequestType {
     private var path: String {
         switch self {
         case .fiveDays(let city, let apiKey):
-            return "forecast?q=\(city)&appid=\(apiKey)&units=metric"
+            return "forecast?q=\(city)&appid=\(apiKey)&units=metric&lang=ru"
         case .weatherIcon(let iconString):
             return "\(iconString)@2x.png"
         }

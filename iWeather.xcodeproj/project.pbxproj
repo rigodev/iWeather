@@ -24,6 +24,11 @@
 		0FF6D9D222CC973400AB0531 /* WeatherCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9D122CC973400AB0531 /* WeatherCellViewModelType.swift */; };
 		0FF6D9D422CCB82900AB0531 /* WeatherCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9D322CCB82900AB0531 /* WeatherCellViewModel.swift */; };
 		0FF6D9D622CD40C600AB0531 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9D522CD40C600AB0531 /* Box.swift */; };
+		0FF6D9DC22CE5BF600AB0531 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9DB22CE5BF600AB0531 /* ContainerViewController.swift */; };
+		0FF6D9DE22CE636D00AB0531 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9DD22CE636D00AB0531 /* MenuViewController.swift */; };
+		0FF6D9E022CE6D3900AB0531 /* WeatherDateListViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9DF22CE6D3900AB0531 /* WeatherDateListViewControllerDelegate.swift */; };
+		0FF6D9E222CE863000AB0531 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9E122CE863000AB0531 /* MenuManager.swift */; };
+		0FF6D9E422CE8F0600AB0531 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9E322CE8F0600AB0531 /* MenuCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +51,11 @@
 		0FF6D9D122CC973400AB0531 /* WeatherCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCellViewModelType.swift; sourceTree = "<group>"; };
 		0FF6D9D322CCB82900AB0531 /* WeatherCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCellViewModel.swift; sourceTree = "<group>"; };
 		0FF6D9D522CD40C600AB0531 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Box.swift; path = ../Protocol/Box.swift; sourceTree = "<group>"; };
+		0FF6D9DB22CE5BF600AB0531 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		0FF6D9DD22CE636D00AB0531 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		0FF6D9DF22CE6D3900AB0531 /* WeatherDateListViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDateListViewControllerDelegate.swift; sourceTree = "<group>"; };
+		0FF6D9E122CE863000AB0531 /* MenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
+		0FF6D9E322CE8F0600AB0531 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +117,10 @@
 			isa = PBXGroup;
 			children = (
 				0F0046CF22CA30A8008BFE98 /* WeatherDateListViewController.swift */,
+				0FF6D9DB22CE5BF600AB0531 /* ContainerViewController.swift */,
+				0FF6D9DD22CE636D00AB0531 /* MenuViewController.swift */,
 				0F0046F322CA7282008BFE98 /* WeatherCell.swift */,
+				0FF6D9E322CE8F0600AB0531 /* MenuCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,6 +138,7 @@
 			children = (
 				0FA5F6D222CB880E0081F0EB /* WeatherDay.swift */,
 				0FA5F6D522CB88D90081F0EB /* WeatherIconManager.swift */,
+				0FF6D9E122CE863000AB0531 /* MenuManager.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -144,6 +158,7 @@
 			children = (
 				0FF6D9CF22CC96A700AB0531 /* WeatherDateListViewModelType.swift */,
 				0FF6D9D122CC973400AB0531 /* WeatherCellViewModelType.swift */,
+				0FF6D9DF22CE6D3900AB0531 /* WeatherDateListViewControllerDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -225,10 +240,15 @@
 				0FA5F6DA22CBB8E90081F0EB /* ErrorManager.swift in Sources */,
 				0F0046E122CA34C7008BFE98 /* APIManager.swift in Sources */,
 				0F0046D022CA30A8008BFE98 /* WeatherDateListViewController.swift in Sources */,
+				0FF6D9E422CE8F0600AB0531 /* MenuCell.swift in Sources */,
 				0FF6D9D022CC96A700AB0531 /* WeatherDateListViewModelType.swift in Sources */,
+				0FF6D9DE22CE636D00AB0531 /* MenuViewController.swift in Sources */,
+				0FF6D9DC22CE5BF600AB0531 /* ContainerViewController.swift in Sources */,
 				0FF6D9D422CCB82900AB0531 /* WeatherCellViewModel.swift in Sources */,
 				0F0046CE22CA30A8008BFE98 /* AppDelegate.swift in Sources */,
 				0FA5F6D322CB880E0081F0EB /* WeatherDay.swift in Sources */,
+				0FF6D9E222CE863000AB0531 /* MenuManager.swift in Sources */,
+				0FF6D9E022CE6D3900AB0531 /* WeatherDateListViewControllerDelegate.swift in Sources */,
 				0FA5F6DE22CBFDC90081F0EB /* JSONForecast.swift in Sources */,
 				0FA5F6DC22CBC8400081F0EB /* APIWeatherManager.swift in Sources */,
 				0FF6D9CD22CC8CFC00AB0531 /* WeatherDateListViewModel.swift in Sources */,

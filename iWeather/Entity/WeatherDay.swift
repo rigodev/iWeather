@@ -12,6 +12,7 @@ import UIKit
 struct WeatherDay {
     let date: Date
     let temperature: Double
+    let description: String
     let humidity: Double
     let icon: String
 }
@@ -46,9 +47,10 @@ extension WeatherDay {
 extension WeatherDay: JSONDayDecodable {
     
     init?(json: JSONDay) {
-        guard let iconString = json.weather.first?.icon else { return nil }
+        guard let jsonWeather = json.weather.first else { return nil }
         
-        icon = iconString
+        icon = jsonWeather.icon
+        description = jsonWeather.description
         date = Date(timeIntervalSince1970: json.dt)
         temperature = json.main.temp
         humidity = json.main.humidity        
