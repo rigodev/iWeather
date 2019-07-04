@@ -30,5 +30,5 @@ struct JSONDayMain: Decodable {
 }
 
 struct JSONDayWeather: Decodable {
-    let main: String
+    let icon: String
 }

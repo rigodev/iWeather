@@ -15,6 +15,8 @@ enum ReuseCellID: String {
 class WeatherDateListViewController: UIViewController {
     
     @IBOutlet weak var weatherDateListTableView: UITableView!
+    @IBOutlet weak var citySearchBar: UISearchBar!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private var viewModel: WeatherDateListViewModelType!
     
@@ -22,9 +24,7 @@ class WeatherDateListViewController: UIViewController {
         super.viewDidLoad()
         
         configure()
-        
-        viewModel = WeatherDateListViewModel()        
-        fetchForecastData()
+        viewModel = WeatherDateListViewModel()
     }
 }
 
@@ -33,16 +33,24 @@ extension WeatherDateListViewController {
     func configure() {
         weatherDateListTableView.delegate = self
         weatherDateListTableView.dataSource = self
+        
+        citySearchBar.delegate = self
     }
     
-    func fetchForecastData() {
-        viewModel.fetchFiveDaysWeatherData(forCity: "Moscow") { [weak self] (error) in
+    func fetchForecast(withCity cityString: String) {
+        
+        weatherDateListTableView.isHidden = true
+        activityIndicator.startAnimating()
+        
+        viewModel.fetchFiveDaysWeatherData(forCity: cityString) { [weak self] (error) in
             
             if let error = error {
                 print("Error: \(error.localizedDescription)")
             }
             
             DispatchQueue.main.async {
+                self?.activityIndicator.stopAnimating()
+                self?.weatherDateListTableView.isHidden = false
                 self?.weatherDateListTableView.reloadData()
             }
         }
@@ -79,4 +87,18 @@ extension WeatherDateListViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension WeatherDateListViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+}
+
+// MARK: - UISearchBarDelegate
+extension WeatherDateListViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        
+        guard let city = searchBar.text else { return }
+        fetchForecast(withCity: city)
+    }
 }

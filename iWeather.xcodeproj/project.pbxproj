@@ -23,6 +23,7 @@
 		0FF6D9D022CC96A700AB0531 /* WeatherDateListViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9CF22CC96A700AB0531 /* WeatherDateListViewModelType.swift */; };
 		0FF6D9D222CC973400AB0531 /* WeatherCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9D122CC973400AB0531 /* WeatherCellViewModelType.swift */; };
 		0FF6D9D422CCB82900AB0531 /* WeatherCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9D322CCB82900AB0531 /* WeatherCellViewModel.swift */; };
+		0FF6D9D622CD40C600AB0531 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9D522CD40C600AB0531 /* Box.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		0FF6D9CF22CC96A700AB0531 /* WeatherDateListViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDateListViewModelType.swift; sourceTree = "<group>"; };
 		0FF6D9D122CC973400AB0531 /* WeatherCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCellViewModelType.swift; sourceTree = "<group>"; };
 		0FF6D9D322CCB82900AB0531 /* WeatherCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCellViewModel.swift; sourceTree = "<group>"; };
+		0FF6D9D522CD40C600AB0531 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Box.swift; path = ../Protocol/Box.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			children = (
 				0FF6D9CC22CC8CFC00AB0531 /* WeatherDateListViewModel.swift */,
 				0FF6D9D322CCB82900AB0531 /* WeatherCellViewModel.swift */,
+				0FF6D9D522CD40C600AB0531 /* Box.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F0046F422CA7282008BFE98 /* WeatherCell.swift in Sources */,
+				0FF6D9D622CD40C600AB0531 /* Box.swift in Sources */,
 				0FA5F6D622CB88D90081F0EB /* WeatherIconManager.swift in Sources */,
 				0FA5F6DA22CBB8E90081F0EB /* ErrorManager.swift in Sources */,
 				0F0046E122CA34C7008BFE98 /* APIManager.swift in Sources */,
