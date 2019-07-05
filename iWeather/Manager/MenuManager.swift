@@ -14,14 +14,14 @@ enum MenuManager: Int, CaseIterable {
     var name: String {
         switch self {
         case .Intro:
-            return "Описание программы"
+            return "О программе"
         }
     }
     
     var icon: UIImage {
         switch self {
         case .Intro:
-            return UIImage(named: "intro") ?? UIImage()
+            return UIImage(named: "info") ?? UIImage()
         }
     }
     

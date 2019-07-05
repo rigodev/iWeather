@@ -63,6 +63,11 @@ extension WeatherDateListViewController {
         }
     }
     
+    private func saveForecastQuery(_ query: String) {
+        let trimmedQuery = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        ForecastQueryManager.addQuery(trimmedQuery)
+    }
+    
     func showAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
@@ -107,6 +112,7 @@ extension WeatherDateListViewController: UISearchBarDelegate {
         searchBar.resignFirstResponder()
         
         guard let city = searchBar.text else { return }
+        saveForecastQuery(city)
         fetchForecast(withCity: city)
     }
 }
