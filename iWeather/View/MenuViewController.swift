@@ -104,9 +104,23 @@ extension MenuViewController: UITableViewDataSource {
 extension MenuViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
+        
+        switch indexPath.section {
+        case 0:
+            tableView.deselectRow(at: indexPath, animated: true)
+            
+            if let menuItem = MenuManager(withIndex: indexPath.row) {
+                switch menuItem {
+                case .Intro:
+                    let introPageVC = IntroPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+                    present(introPageVC, animated: true, completion: nil)
+                }
+            }
+            
+        default:
+            break
+        }
+    }    
 }
 
 // MARK: - UIScrollViewDelegate
