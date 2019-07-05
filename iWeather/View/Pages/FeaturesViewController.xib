@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeaturesViewController" customModule="iWeather" customModuleProvider="target">
+            <connections>
+                <outlet property="exitButton" destination="gcF-n1-HXH" id="iAc-6a-OfT"/>
+                <outlet property="pageControl" destination="9y6-hN-vK4" id="moY-A7-0NO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="h4J-9e-jpS">
+                    <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TZG-v2-I2L">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="446"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunrise" translatesAutoresizingMaskIntoConstraints="NO" id="hxD-4J-bdD">
+                                    <rect key="frame" x="10" y="10" width="300" height="426"/>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="hxD-4J-bdD" firstAttribute="top" secondItem="TZG-v2-I2L" secondAttribute="top" constant="10" id="AjL-fW-Lat"/>
+                                <constraint firstItem="hxD-4J-bdD" firstAttribute="leading" secondItem="TZG-v2-I2L" secondAttribute="leading" constant="10" id="Kji-uw-Fxq"/>
+                                <constraint firstAttribute="bottom" secondItem="hxD-4J-bdD" secondAttribute="bottom" constant="10" id="UdY-hx-xz1"/>
+                                <constraint firstAttribute="trailing" secondItem="hxD-4J-bdD" secondAttribute="trailing" constant="10" id="mJX-T7-1Jt"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1va-ui-JLF">
+                            <rect key="frame" x="0.0" y="446" width="320" height="52"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcF-n1-HXH">
+                                    <rect key="frame" x="110" y="11" width="100" height="30"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="gcF-n1-HXH" secondAttribute="height" multiplier="10:3" id="3oA-tX-D3m"/>
+                                    </constraints>
+                                    <state key="normal" title="Выход">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="exitTapped:" destination="-1" eventType="touchUpInside" id="JnH-2i-G4c"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="gcF-n1-HXH" firstAttribute="centerY" secondItem="1va-ui-JLF" secondAttribute="centerY" id="B2p-2L-i06"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="XV6-bq-cfY"/>
+                                <constraint firstItem="gcF-n1-HXH" firstAttribute="centerX" secondItem="1va-ui-JLF" secondAttribute="centerX" id="wIh-bA-w1d"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgt-Ty-zgL">
+                            <rect key="frame" x="0.0" y="498" width="320" height="50"/>
+                            <subviews>
+                                <pageControl opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="9y6-hN-vK4">
+                                    <rect key="frame" x="148.5" y="6.5" width="23" height="37"/>
+                                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </pageControl>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="1At-2O-cwN"/>
+                                <constraint firstItem="9y6-hN-vK4" firstAttribute="centerY" secondItem="zgt-Ty-zgL" secondAttribute="centerY" id="2tI-nO-tzx"/>
+                                <constraint firstItem="9y6-hN-vK4" firstAttribute="centerX" secondItem="zgt-Ty-zgL" secondAttribute="centerX" id="4YR-0k-Cft"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="h4J-9e-jpS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="HLi-5v-0Ix"/>
+                <constraint firstItem="h4J-9e-jpS" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Kv5-Wf-Sup"/>
+                <constraint firstItem="h4J-9e-jpS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="U7p-WP-WAB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="h4J-9e-jpS" secondAttribute="trailing" id="kNf-lt-fBk"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="61.875" y="60.2112676056338"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="sunrise" width="512" height="512"/>
+    </resources>
+</document>

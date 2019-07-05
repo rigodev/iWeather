@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GreetingViewController" customModule="iWeather" customModuleProvider="target">
+            <connections>
+                <outlet property="nextButton" destination="Ml3-Gh-4rO" id="AAn-Vj-H3y"/>
+                <outlet property="pageControl" destination="SXb-f2-gPh" id="zUJ-zz-LaI"/>
+                <outlet property="view" destination="yvF-XA-ff4" id="c7H-pZ-eqf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="yvF-XA-ff4">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gZs-f1-Thd">
+                    <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qzz-LQ-97p">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="446"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cityscape" translatesAutoresizingMaskIntoConstraints="NO" id="44p-bc-054">
+                                    <rect key="frame" x="10" y="10" width="300" height="426"/>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="44p-bc-054" secondAttribute="bottom" constant="10" id="6Gu-B3-KO3"/>
+                                <constraint firstItem="44p-bc-054" firstAttribute="leading" secondItem="Qzz-LQ-97p" secondAttribute="leading" constant="10" id="8lr-nr-dx5"/>
+                                <constraint firstItem="44p-bc-054" firstAttribute="top" secondItem="Qzz-LQ-97p" secondAttribute="top" constant="10" id="Z4s-Qg-TqO"/>
+                                <constraint firstAttribute="trailing" secondItem="44p-bc-054" secondAttribute="trailing" constant="10" id="fiV-r5-nay"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M8c-5a-ikj">
+                            <rect key="frame" x="0.0" y="446" width="320" height="52"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ml3-Gh-4rO">
+                                    <rect key="frame" x="110" y="11" width="100" height="30"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="Ml3-Gh-4rO" secondAttribute="height" multiplier="10:3" id="lil-Av-G23"/>
+                                    </constraints>
+                                    <state key="normal" title="Далее">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="nextTapped:" destination="-1" eventType="touchUpInside" id="DPn-BP-1PP"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="2xr-ad-Rvy"/>
+                                <constraint firstItem="Ml3-Gh-4rO" firstAttribute="centerY" secondItem="M8c-5a-ikj" secondAttribute="centerY" id="82q-Xe-gjP"/>
+                                <constraint firstItem="Ml3-Gh-4rO" firstAttribute="centerX" secondItem="M8c-5a-ikj" secondAttribute="centerX" id="b7U-4W-Szc"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tfy-jH-kro">
+                            <rect key="frame" x="0.0" y="498" width="320" height="50"/>
+                            <subviews>
+                                <pageControl opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="SXb-f2-gPh">
+                                    <rect key="frame" x="148.5" y="6.5" width="23" height="37"/>
+                                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </pageControl>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="MrZ-Ed-fj6"/>
+                                <constraint firstItem="SXb-f2-gPh" firstAttribute="centerX" secondItem="Tfy-jH-kro" secondAttribute="centerX" id="jxi-aK-xCc"/>
+                                <constraint firstItem="SXb-f2-gPh" firstAttribute="centerY" secondItem="Tfy-jH-kro" secondAttribute="centerY" id="kuJ-ov-yFf"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="gZs-f1-Thd" firstAttribute="leading" secondItem="MjZ-jt-mgR" secondAttribute="leading" id="6Fj-E5-SHy"/>
+                <constraint firstItem="gZs-f1-Thd" firstAttribute="top" secondItem="MjZ-jt-mgR" secondAttribute="top" id="BS9-aD-Toz"/>
+                <constraint firstItem="gZs-f1-Thd" firstAttribute="bottom" secondItem="MjZ-jt-mgR" secondAttribute="bottom" id="MgE-SU-YTf"/>
+                <constraint firstItem="MjZ-jt-mgR" firstAttribute="trailing" secondItem="gZs-f1-Thd" secondAttribute="trailing" id="dYk-3z-OmZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="MjZ-jt-mgR"/>
+            <point key="canvasLocation" x="61.875" y="60.2112676056338"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cityscape" width="512" height="512"/>
+    </resources>
+</document>

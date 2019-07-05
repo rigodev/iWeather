@@ -15,11 +15,7 @@ class ForecastQueryCell: UITableViewCell {
     static let reuseId = "ForecatQueryCell"
     
     var cityName: String? {
-        get {
-            return cityNameLabel.text
-        }
-        
-        set(city) {
+        willSet(city) {
             cityNameLabel.text = city
         }
     }

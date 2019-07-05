@@ -16,21 +16,13 @@ class MenuCell: UITableViewCell {
     static let reuseId = "MenuCell"
     
     var menuImage: UIImage? {
-        get {
-            return menuImageView.image
-        }
-        
-        set(image) {
+        willSet(image) {
             menuImageView.image = image
         }
     }
     
     var menuName: String? {
-        get {
-            return menuNameLabel.text
-        }
-        
-        set(name) {
+        willSet(name) {
             menuNameLabel.text = name
         }
     }

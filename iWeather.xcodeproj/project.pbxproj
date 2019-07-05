@@ -32,6 +32,15 @@
 		0FF6D9E622CF379F00AB0531 /* ForecastQueryManagerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9E522CF379F00AB0531 /* ForecastQueryManagerType.swift */; };
 		0FF6D9E922CF38A100AB0531 /* ForecastQueryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9E822CF38A100AB0531 /* ForecastQueryManager.swift */; };
 		0FF6D9EC22CF527400AB0531 /* ForecastQueryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9EB22CF527400AB0531 /* ForecastQueryCell.swift */; };
+		0FF6D9EE22CF6A7100AB0531 /* IntroPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9ED22CF6A7100AB0531 /* IntroPageViewController.swift */; };
+		0FF6D9F022CF71E200AB0531 /* PageListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9EF22CF71E200AB0531 /* PageListManager.swift */; };
+		0FF6D9F222CF71F400AB0531 /* PageListManagerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9F122CF71F400AB0531 /* PageListManagerType.swift */; };
+		0FF6D9F522CF822200AB0531 /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9F322CF822200AB0531 /* GreetingViewController.swift */; };
+		0FF6D9F622CF822200AB0531 /* GreetingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FF6D9F422CF822200AB0531 /* GreetingViewController.xib */; };
+		0FF6D9FA22CF827700AB0531 /* FeaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9F822CF827700AB0531 /* FeaturesViewController.swift */; };
+		0FF6D9FB22CF827700AB0531 /* FeaturesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FF6D9F922CF827700AB0531 /* FeaturesViewController.xib */; };
+		0FF6D9FD22CF8E8D00AB0531 /* TemplatePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9FC22CF8E8D00AB0531 /* TemplatePageViewController.swift */; };
+		0FF6D9FF22CF953400AB0531 /* UIColor+colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6D9FE22CF953400AB0531 /* UIColor+colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +71,15 @@
 		0FF6D9E522CF379F00AB0531 /* ForecastQueryManagerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastQueryManagerType.swift; sourceTree = "<group>"; };
 		0FF6D9E822CF38A100AB0531 /* ForecastQueryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastQueryManager.swift; sourceTree = "<group>"; };
 		0FF6D9EB22CF527400AB0531 /* ForecastQueryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastQueryCell.swift; sourceTree = "<group>"; };
+		0FF6D9ED22CF6A7100AB0531 /* IntroPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroPageViewController.swift; sourceTree = "<group>"; };
+		0FF6D9EF22CF71E200AB0531 /* PageListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageListManager.swift; sourceTree = "<group>"; };
+		0FF6D9F122CF71F400AB0531 /* PageListManagerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageListManagerType.swift; sourceTree = "<group>"; };
+		0FF6D9F322CF822200AB0531 /* GreetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GreetingViewController.swift; path = ../GreetingViewController.swift; sourceTree = "<group>"; };
+		0FF6D9F422CF822200AB0531 /* GreetingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GreetingViewController.xib; path = ../GreetingViewController.xib; sourceTree = "<group>"; };
+		0FF6D9F822CF827700AB0531 /* FeaturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesViewController.swift; sourceTree = "<group>"; };
+		0FF6D9F922CF827700AB0531 /* FeaturesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturesViewController.xib; sourceTree = "<group>"; };
+		0FF6D9FC22CF8E8D00AB0531 /* TemplatePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatePageViewController.swift; sourceTree = "<group>"; };
+		0FF6D9FE22CF953400AB0531 /* UIColor+colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+colors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +143,8 @@
 				0F0046CF22CA30A8008BFE98 /* WeatherDateListViewController.swift */,
 				0FF6D9DB22CE5BF600AB0531 /* ContainerViewController.swift */,
 				0FF6D9DD22CE636D00AB0531 /* MenuViewController.swift */,
+				0FF6D9ED22CF6A7100AB0531 /* IntroPageViewController.swift */,
+				0FF6D9F722CF824800AB0531 /* Pages */,
 				0FF6D9EA22CF524700AB0531 /* Cell */,
 			);
 			path = View;
@@ -163,6 +183,7 @@
 				0FF6D9D122CC973400AB0531 /* WeatherCellViewModelType.swift */,
 				0FF6D9DF22CE6D3900AB0531 /* WeatherDateListViewControllerDelegate.swift */,
 				0FF6D9E522CF379F00AB0531 /* ForecastQueryManagerType.swift */,
+				0FF6D9F122CF71F400AB0531 /* PageListManagerType.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -174,6 +195,7 @@
 				0FA5F6D522CB88D90081F0EB /* WeatherIconManager.swift */,
 				0FF6D9E122CE863000AB0531 /* MenuManager.swift */,
 				0FF6D9E822CF38A100AB0531 /* ForecastQueryManager.swift */,
+				0FF6D9EF22CF71E200AB0531 /* PageListManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -186,6 +208,19 @@
 				0FF6D9EB22CF527400AB0531 /* ForecastQueryCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		0FF6D9F722CF824800AB0531 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				0FF6D9F322CF822200AB0531 /* GreetingViewController.swift */,
+				0FF6D9F822CF827700AB0531 /* FeaturesViewController.swift */,
+				0FF6D9FC22CF8E8D00AB0531 /* TemplatePageViewController.swift */,
+				0FF6D9F422CF822200AB0531 /* GreetingViewController.xib */,
+				0FF6D9F922CF827700AB0531 /* FeaturesViewController.xib */,
+				0FF6D9FE22CF953400AB0531 /* UIColor+colors.swift */,
+			);
+			path = Pages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,9 +281,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FF6D9FB22CF827700AB0531 /* FeaturesViewController.xib in Resources */,
 				0F0046D822CA30A9008BFE98 /* LaunchScreen.storyboard in Resources */,
 				0F0046D522CA30A9008BFE98 /* Assets.xcassets in Resources */,
 				0F0046D322CA30A8008BFE98 /* Main.storyboard in Resources */,
+				0FF6D9F622CF822200AB0531 /* GreetingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +299,10 @@
 				0F0046F422CA7282008BFE98 /* WeatherCell.swift in Sources */,
 				0FF6D9D622CD40C600AB0531 /* Box.swift in Sources */,
 				0FA5F6D622CB88D90081F0EB /* WeatherIconManager.swift in Sources */,
+				0FF6D9FA22CF827700AB0531 /* FeaturesViewController.swift in Sources */,
 				0FA5F6DA22CBB8E90081F0EB /* ErrorManager.swift in Sources */,
 				0F0046E122CA34C7008BFE98 /* APIManager.swift in Sources */,
+				0FF6D9FD22CF8E8D00AB0531 /* TemplatePageViewController.swift in Sources */,
 				0FF6D9E622CF379F00AB0531 /* ForecastQueryManagerType.swift in Sources */,
 				0F0046D022CA30A8008BFE98 /* WeatherDateListViewController.swift in Sources */,
 				0FF6D9E422CE8F0600AB0531 /* MenuCell.swift in Sources */,
@@ -271,15 +310,20 @@
 				0FF6D9DE22CE636D00AB0531 /* MenuViewController.swift in Sources */,
 				0FF6D9DC22CE5BF600AB0531 /* ContainerViewController.swift in Sources */,
 				0FF6D9E922CF38A100AB0531 /* ForecastQueryManager.swift in Sources */,
+				0FF6D9F022CF71E200AB0531 /* PageListManager.swift in Sources */,
 				0FF6D9D422CCB82900AB0531 /* WeatherCellViewModel.swift in Sources */,
+				0FF6D9FF22CF953400AB0531 /* UIColor+colors.swift in Sources */,
 				0FF6D9EC22CF527400AB0531 /* ForecastQueryCell.swift in Sources */,
 				0F0046CE22CA30A8008BFE98 /* AppDelegate.swift in Sources */,
 				0FA5F6D322CB880E0081F0EB /* WeatherDay.swift in Sources */,
+				0FF6D9F522CF822200AB0531 /* GreetingViewController.swift in Sources */,
 				0FF6D9E222CE863000AB0531 /* MenuManager.swift in Sources */,
 				0FF6D9E022CE6D3900AB0531 /* WeatherDateListViewControllerDelegate.swift in Sources */,
 				0FA5F6DE22CBFDC90081F0EB /* JSONForecast.swift in Sources */,
+				0FF6D9F222CF71F400AB0531 /* PageListManagerType.swift in Sources */,
 				0FA5F6DC22CBC8400081F0EB /* APIWeatherManager.swift in Sources */,
 				0FF6D9CD22CC8CFC00AB0531 /* WeatherDateListViewModel.swift in Sources */,
+				0FF6D9EE22CF6A7100AB0531 /* IntroPageViewController.swift in Sources */,
 				0FF6D9D222CC973400AB0531 /* WeatherCellViewModelType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
