@@ -59,7 +59,7 @@ extension ContainerViewController {
                             
                             let offset = mainController.view.frame.width * 0.7
                             mainController.view.frame.origin.x = offset
-                            menuController.changeWidthFrame(to: offset)
+                            menuController.changeFrameWidth(to: offset)
                             
                 }, completion: nil)
         } else {
